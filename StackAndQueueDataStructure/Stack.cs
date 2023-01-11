@@ -33,5 +33,33 @@ namespace StackAndQueueDataStructure
                 temp = temp.next;
             }
         }
+        public void Peek()          // Peek method to show top element
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine(" Stack is Empty");
+                return;
+            }
+            Console.WriteLine("\nTop most element " + this.top.data);
+        }
+        public void Pop()       // Pop method to delete element
+        {
+            if (this.top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("Value popped is {0}", this.top.data);
+            this.top = this.top.next;
+        }
+        public void IsEmpty()           //Empty method to make stack empty
+        {
+            while (this.top != null)
+            {
+                Peek();
+                Pop();
+            }
+            Console.WriteLine("\nThe stack is empty");
+        }
     }
 }

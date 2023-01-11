@@ -12,7 +12,7 @@ namespace StackAndQueueDataStructure
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Stack And Queue Data Structure ");
-            Console.WriteLine("\n1:Create stack using LinkedList");        
+            Console.WriteLine("\n1:Create stack \n2.Peek and Pop from Stack");        
             int option = Convert.ToInt32(Console.ReadLine());
             Stack stack = new Stack();
             switch (option)        
@@ -23,6 +23,14 @@ namespace StackAndQueueDataStructure
                     stack.Push(56);
                     Console.WriteLine("-------------------------------------");
                     stack.Display();
+                    break;
+
+                case 2://UC2 Peek and Pop stack
+                    stack.Push(70);
+                    stack.Push(30);
+                    stack.Push(56);
+                    Console.WriteLine("-------------------------------------");
+                    stack.IsEmpty();
                     break;
 
                 default:

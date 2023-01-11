@@ -27,6 +27,24 @@ namespace StackAndQueueDataStructure
             }
             Console.WriteLine("{0} is Enqueue into Queue", new_node.data);
         }
+        public void Dequeue()           //Creating Dequeue
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Queue is Empty");
+                return;
+            }
+            Console.WriteLine("Dequeue value : {0}", this.head.data);
+            this.head = this.head.next;
+        }
+        public void IsEmpty()
+        {
+            while (this.head != null)
+            {
+                Dequeue();
+            }
+        }
         public void Display()           //Creating display method
         {
             Node temp = this.head;

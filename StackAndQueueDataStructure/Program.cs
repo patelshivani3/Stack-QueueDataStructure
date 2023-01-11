@@ -12,7 +12,7 @@ namespace StackAndQueueDataStructure
         static void Main(string[] args)
         {
             Console.WriteLine("\nWelcome to Stack And Queue Data Structure ");
-            Console.WriteLine("\n1:Create stack \n2.Peek and Pop from Stack\n3.Create Queue ");        
+            Console.WriteLine("\n1:Create stack \n2.Peek and Pop from Stack\n3.Create Queue\n4.Perform DeQueue ");        
             int option = Convert.ToInt32(Console.ReadLine());
             Stack stack = new Stack();
             Queue queue = new Queue();
@@ -40,6 +40,15 @@ namespace StackAndQueueDataStructure
                     queue.Enqueue(70);
                     Console.WriteLine("-------------------------------------");
                     queue.Display();
+                    break;
+
+                case 4://UC4 Perform Dequeue
+                    queue.Enqueue(56);
+                    queue.Enqueue(30);
+                    queue.Enqueue(70);
+                    Console.WriteLine("-------------------------------------");
+                    queue.Dequeue();
+                    queue.IsEmpty();
                     break;
 
                 default:
